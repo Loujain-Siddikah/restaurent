@@ -1,0 +1,101 @@
+.menuCard{
+    position: absolute;
+    top: -17px;
+    z-index: -1;
+}
+
+.MyMenu{
+    display: grid;
+    justify-content: center !important;
+}
+
+
+/* xl screen */
+@media(min-width:1200px){
+    .menuN{
+        padding-left: 28%;
+        font-size:19px ;
+    }
+    .description{
+        font-size: 24px;
+    }
+    .sectionMenu{
+        font-size: 24px;
+    }
+}
+
+/* lg screen */
+@media screen and (min-width:992px) and (max-width:1199px){
+    .menuN{
+        padding-left: 28%;
+    }
+    .description{
+        font-size: 22px;
+    }
+    .sectionMenu{
+        font-size: 19px;
+    }
+}
+
+/* med screen */
+@media screen and (min-width:768px) and (max-width:991px){
+    .menuN{
+        padding-left: 21%;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .sectionMenu{
+        font-size: 21px;
+    }
+}
+/* small screen */
+@media screen and (min-width:576px) and (max-width:767px){
+    .name{
+        display: grid;
+        grid-template-columns: 65px;
+        font-size: 0.88em;
+    }
+    .menuN{
+        padding-left: 21%;
+    }
+    .description{
+        font-size: 17px;
+    }
+    .sectionMenu{
+        font-size: 15px;
+    }
+}
+
+/* xs screen */
+@media screen and (min-width:421px) and (max-width:575px){
+    .menuN{
+        padding-left: 7%;
+    }
+    .description{
+        font-size: 18px;
+    }
+    .sectionMenu{
+        font-size: 20px;
+    }
+}
+
+ @media screen and (min-width:334px) and (max-width:420px){
+    .menuN{
+        padding-left: 7%;
+    }
+    .name{
+        display: grid;
+        grid-template-columns: 65px;
+        font-size: 0.8em;
+    }
+    .description{
+        font-size: 15px;
+    }
+    .sectionMenu{
+        font-size: 14px;
+    }
+}
+
+
+

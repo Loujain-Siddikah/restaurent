@@ -1,0 +1,21 @@
+@media (min-width:768px) {
+    .itemName{
+        font-size: 22px;
+    }
+}
+
+@media (max-width:767px) {
+    .itemName{
+        font-size: 14px;
+    }
+}
+
+input[type=submit] {
+    background-image: linear-gradient(to right, #6b6e72, #5a5f64, #485057, #37424a, #26343d);
+    color: white;
+    border-width: 1px;
+    border-color:rgb(181, 183, 185);
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
