@@ -281,6 +281,7 @@ button:hover {
   align-items: center;
   /* padding: 0 20px; */
   width: 100%;
+  
   height: 50px;
 }
 
@@ -295,6 +296,8 @@ button:hover {
 /* .validate-input {
   position: relative;
 }
+
+
 
 .alert-validate::before {
   content: attr(data-validate);

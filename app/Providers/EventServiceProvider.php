@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Events\MealOrdered;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Event;
 
 use Illuminate\Auth\Events\Logout;
 use App\Listeners\ClearUserSession;
+use App\Listeners\ShowOrderData;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,10 @@ class EventServiceProvider extends ServiceProvider
 
         Logout::class => [
             ClearUserSession::class,
+        ],
+
+        MealOrdered::class => [
+            ShowOrderData::class,
         ],
     ];
 

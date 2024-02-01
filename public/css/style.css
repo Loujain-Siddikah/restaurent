@@ -1,15 +1,57 @@
-.menuCard{
-    position: absolute;
-    top: -17px;
-    z-index: -1;
+
+.card{
+    background-color: #e8eaec;
+}
+/* @media screen and (max-width: 991px) {
+    .col-5 {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+} */
+.menuN{
+    position: relative;
+    /* top: 5px; */
+    z-index: 1;
 }
 
 .MyMenu{
     display: grid;
     justify-content: center !important;
+  
 }
 
+.sectionMenu{
+    background-image: linear-gradient(to right, #6b6e72, #5a5f64, #485057, #37424a, #26343d);
+    border-style: solid;
+    border-color:rgb(181, 183, 185);
+    border-width:1px;
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family: 'Roboto Slab', serif;
+    height: 5vh;
+}
 
+.custom-input {
+    width: 10%; 
+
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.custom-button {
+    font-size: 14px; /* Adjust the font size as needed */
+    padding: 5px 10px; /* Adjust the padding as needed */
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
 /* xl screen */
 @media(min-width:1200px){
     .menuN{
@@ -18,10 +60,11 @@
     }
     .description{
         font-size: 24px;
-    }
+    } 
     .sectionMenu{
-        font-size: 24px;
+        font-size: 27px;
     }
+   
 }
 
 /* lg screen */
@@ -96,6 +139,3 @@
         font-size: 14px;
     }
 }
-
-
-

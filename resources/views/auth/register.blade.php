@@ -1,77 +1,82 @@
-@extends('layouts.app')
 
+@extends('layouts.master')
+@section('title')
+    giriş yapmak
+@endsection
+
+@section('css')
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+@endsection
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <span class="login100-form-title p-b-49">
+                    Maviş Döner
+                </span>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul style="list-style-type: none; ">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('register') }}" class="login-form">
+                    @csrf
+                    <div class="wrap-input100  m-b-23">
+                        <div class="form-group">
+                            <div class=" d-flex align-items-center justify-content-center">
+                                <i class="fa fa-user" style="font-size: 26px; padding-left:14px" ></i>
+                                <input type="text" class="input100 @error('first_name') is-invalid @enderror"  placeholder="ilk adı" id="first_name" required autofocus name="first_name">
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    </div>
+                    <div class="wrap-input100  m-b-23">
+                        <div class="form-group">
+                            <div class=" d-flex align-items-center justify-content-center">
+                                <i class="fa fa-user" style="font-size: 26px; padding-left:14px" ></i>
+                                <input type="text" class="input100 @error('last_name') is-invalid @enderror"  placeholder="soy adı" id="first_name" required autofocus name="last_name">
                             </div>
                         </div>
+                    </div>  
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    <div class="wrap-input100  m-b-23">
+                        <div class="form-group">
+                            <div class=" d-flex align-items-center justify-content-center">
+                                <i class="fa fa-envelope" style="font-size: 22px; padding-left:14px"></i>
+                                <input type="text" class="input100 @error('email') is-invalid @enderror"  placeholder="E-posta" id="email" required autofocus name="email">
                             </div>
                         </div>
+                    </div> 
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    <div class="wrap-input100  m-b-23">
+                        <div class="form-group">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="fa fa-lock" style="font-size: 26px; padding-left:14px"></i>
+                                <input type="password" id="password" class="input100 @error('password') is-invalid @enderror" placeholder="Şifre" name="password" required>
                             </div>
                         </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                    </div>   
+                        
+                    <div class="wrap-input100  m-b-23">
+                        <div class="form-group">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="fa fa-lock" style="font-size: 26px; padding-left:14px"></i>
+                                <input type="password" id="confirm_password" class="input100 @error('confirmed') is-invalid @enderror" placeholder="Şifreyi Onayla
+                                " name="password_confirmation" required>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>  
+                    <div class="pt-3 pb-0 mb-0">
+                        <button class="btn btn-lg" style="background-image: linear-gradient(to right, #6b6e72, #5a5f64, #485057, #37424a, #26343d);border-color:rgb(181, 183, 185);border-width:1px; border-radius: 20px;" type="submit">
+                                kayıt ol
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
 @endsection

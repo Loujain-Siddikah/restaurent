@@ -1,0 +1,11 @@
+/* a:active {
+    color: rgba(212, 26, 26, 0.911);
+  } */
+
+  /* a:visited {
+    color: green;
+  } */
+
+a {
+    text-decoration: none !important;
+}

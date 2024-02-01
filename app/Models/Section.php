@@ -9,12 +9,12 @@ class Section extends Model
 {
     use HasFactory;
     protected $table='sections';
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'status'];
     public $timestamp='true';
+    
     public function items()
     {
-        return $this->hasMany('App\Models\section_item');
+        return $this->hasMany(Item::class);
     }
-   
 
 }

@@ -24,8 +24,13 @@ class ClearUserSession
      * @param  object  $event
      * @return void
      */
+    // public function handle(Logout $event)
+    // {
+    //     $event->user->session()->flush();
+    // }
     public function handle(Logout $event)
     {
-        $event->user->session()->flush();
+        // Clear the user's session
+        session()->flush();
     }
 }

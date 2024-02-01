@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ asset('css/adminStyle.css') }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
-        <title>yönetici</title>
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    </head>
+@extends('layouts.master')
+@section('title')
+    change-price
+@endsection
 
-    <body style="background: url('/images/background.jpg');-webkit-background-size: 100%; 
-                -moz-background-size: 100%; 
-                -o-background-size: 100%; 
-                background-size: 100%; 
-                -webkit-background-size: cover; 
-                -moz-background-size: cover; 
-                -o-background-size: cover; 
-                background-attachment: fixed;
-                background-position: center center;
-                background-repeat: no-repeat;">
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endsection
+
+@section('content')
         @if(Session::get('success'))
             <div class="alert alert-success">
                 {{Session::get('success')}}
@@ -35,7 +19,7 @@
             </div>
         @endif
         <form method="POST" action="{{url('/update_price')}}">
-            {{csrf_field()}}
+            @csrf
             <div class="container-fluid">
                 @foreach ($items as $item)
                     <div class="form-group row pt-2 justify-content-center itemName">
