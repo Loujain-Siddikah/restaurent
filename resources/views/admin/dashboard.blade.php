@@ -1,6 +1,6 @@
 @extends('layouts.adminMaster')
 @section('title')
-    Dashboard
+    Gösterge Paneli
 @endsection
 
 @section('css')
@@ -13,7 +13,7 @@
                 <div class="card" style="width:100%; border-radius: 15px; background-image: linear-gradient(to right, rgba(174,176,177,1), rgba(146,157,166,1) , rgba(130,144,162,1) )">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div>
-                            <span>Total Orders (Month)</span>
+                            <span>Toplam Siparişler (Ay)</span>
                             <h3 class="d-flex justify-content-center">{{ $ordersMonthlyCount }}</h3>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                 <div class="card" style="width:100%; border-radius: 15px; background-image: linear-gradient(to right, rgba(174,176,177,1), rgba(146,157,166,1) , rgba(130,144,162,1) )">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div>
-                            <span>New Users (Week)</span>
+                            <span>Yeni Kullanıcılar (Hafta)</span>
                             <h3 class="d-flex justify-content-center">{{ $newUsersWeeklyCount }}</h3>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="card" style="width:100%; border-radius: 15px; background-image: linear-gradient(to right, rgba(174,176,177,1), rgba(146,157,166,1) , rgba(130,144,162,1) )">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div>
-                            <span>Total Revenue (Month)</span>
+                            <span>Toplam Gelir (Ay)</span>
                             <h3 class="d-flex justify-content-center">{{ $totalRevenue }}<i class='fa fa-turkish-lira d-flex align-items-center' style="color:#f9a201; font-size:18px"></i></h3>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                 <div class="card" style="width:100%; border-radius: 15px; background-image: linear-gradient(to right, rgba(174,176,177,1), rgba(146,157,166,1) , rgba(130,144,162,1) )">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div>
-                            <span>Total Users</span>
+                            <span>Toplam Kullanıcı Sayısı</span>
                             <h3 class="d-flex justify-content-center">{{ $totalUsersCount }}</h3>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                 <div class="card mb-4" style="width:100%; border-radius: 15px; background-image: linear-gradient(to right, rgba(174,176,177,1), rgba(146,157,166,1) , rgba(130,144,162,1) )">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div>
-                            <span>Total Meals</span>
+                            <span>Toplam Yemekler</span>
                             <h3 class="d-flex justify-content-center">{{ $totalMeals }}</h3>
                         </div>
                     </div>
